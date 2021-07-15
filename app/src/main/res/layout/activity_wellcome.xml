@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wellcome">
+
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="61dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/btnPtofile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPtofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="PROFILE"
+        app:layout_constraintBottom_toTopOf="@+id/btnPostADog"
+        app:layout_constraintStart_toStartOf="@+id/btnPostADog" />
+
+    <Button
+        android:id="@+id/btnPostADog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:text="הוסף מודעה"
+        app:layout_constraintBottom_toTopOf="@+id/btnWeedList"
+        app:layout_constraintEnd_toEndOf="@+id/btnWeedList" />
+
+    <Button
+        android:id="@+id/btnWeedList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="37dp"
+        android:text="צפיה במדעות"
+        app:layout_constraintBottom_toTopOf="@+id/btnSupplire"
+        app:layout_constraintEnd_toEndOf="@+id/btnSupplire" />
+
+    <Button
+        android:id="@+id/btnSupplire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:text="SUPPLIRSE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="ABOUT"
+        app:layout_constraintStart_toStartOf="@+id/btnSupplire"
+        app:layout_constraintTop_toBottomOf="@+id/btnSupplire" />
+
+    <Button
+        android:id="@+id/btnSignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="יציאה"
+        app:layout_constraintStart_toStartOf="@+id/btnAbout"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

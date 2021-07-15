@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="ראשי"
+        android:id="@+id/action_Home"
+        android:icon="@drawable/ic_action_home"/>
+
+    <item android:title="מדעות"
+        android:id="@+id/action_Post"
+        android:icon="@mipmap/ic_local_post_office"/>
+
+    <item android:title="יצירת מודעה"
+        android:id="@+id/action_Post_Add"
+        android:icon="@mipmap/ic_post_add"/>
+    <item android:title="פרופיל"
+        android:id="@+id/action_Profile"
+        android:icon="@mipmap/ic_person"/>
+</menu>

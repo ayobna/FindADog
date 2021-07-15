@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.125" />
+
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:iss_auto_cycle="true"
+            app:iss_period="1000"
+            app:iss_delay="2"/>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+            <TextView
+                android:id="@+id/txtDogName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="24dp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="0"
+            android:gravity="right"
+           android:layout_marginRight="20dp"
+                      android:autoSizeTextType="uniform"
+            android:text="תיאור כללי"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+
+        <TextView
+            android:id="@+id/txtGeneralDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:autoSizeTextType="uniform"
+            android:gravity="right"
+
+            android:padding="20dp"
+            android:textSize="16dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="0"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+
+            android:text="תכונות אופי"
+            android:textSize="20dp"
+
+            android:textStyle="bold" />
+
+        <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.125" />
+
+        <TextView
+            android:id="@+id/txtCharacteristics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+
+
+            android:autoSizeTextType="uniform"
+            android:gravity="right"
+            android:padding="20dp"
+            android:textSize="16dp"  />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="0"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="בריאות"
+            android:textSize="20dp"
+
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+
+        <TextView
+            android:id="@+id/txtHealth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:autoSizeTextType="uniform"
+
+            android:gravity="right"
+            android:padding="20dp"
+            android:textSize="16dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:text="אילוף"
+                android:gravity="right"
+                android:layout_marginRight="20dp"
+
+
+                android:textStyle="bold"
+                android:textSize="20dp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.125" />
+
+        <TextView
+            android:id="@+id/txtTraining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:autoSizeTextType="uniform"
+            android:gravity="right"
+            android:padding="20dp"
+            android:textSize="16dp"  />
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</ScrollView>
+
