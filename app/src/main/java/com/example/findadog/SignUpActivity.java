@@ -88,7 +88,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         btnOpenCamera = findViewById(R.id.btnOpenCamera);
         imageView = findViewById(R.id.imageView);
         btnPicImage=findViewById(R.id.btnPicImage);
-        btnCancel=findViewById(R.id.btnPicImage);
+        btnCancel=findViewById(R.id.btnCancel);
     }
     private  void  initButtons(){
         btnSignup.setOnClickListener(this);
