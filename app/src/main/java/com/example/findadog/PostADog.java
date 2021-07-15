@@ -3,7 +3,9 @@ package com.example.findadog;
 import android.provider.ContactsContract;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class PostADog  implements Serializable {
@@ -16,7 +18,8 @@ public class PostADog  implements Serializable {
    Double price;
    String phone;
    ArrayList<String> uriImage;
-   int idPost=0;
+    int idPost=0;
+    Date currentTime= Calendar.getInstance().getTime();
     public PostADog() {
     }
 
@@ -31,9 +34,21 @@ public class PostADog  implements Serializable {
         this.phone=phone;
         this.uriImage=uriImage;
         idPost++;
+        currentTime= Calendar.getInstance().getTime();
     }
 
 
+    public void setIdPost(int idPost) {
+        this.idPost = idPost;
+    }
+
+    public Date getCurrentTime() {
+        return currentTime;
+    }
+
+    public void setCurrentTime(Date currentTime) {
+        this.currentTime = currentTime;
+    }
 
     public String getUserPostId() {
         return userPostId;

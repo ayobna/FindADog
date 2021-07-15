@@ -64,9 +64,7 @@ public class UserPostAdapter extends ArrayAdapter<PostADog> {
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 postToRemove=postADogs.get(position);
-                Toast.makeText(getApplicationContext(),postToRemove.getGender(),Toast.LENGTH_LONG).show();
                   removeFromDb();
             }
         });
@@ -85,7 +83,7 @@ public class UserPostAdapter extends ArrayAdapter<PostADog> {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dp : snapshot.getChildren()) {
                     PostADog temp = dp.getValue(PostADog.class);
-                    if (postToRemove.getUserPostId().equals(temp.getUserPostId())) {
+                    if (  postToRemove.getUserPostId() ==temp.getUserPostId()&&postToRemove.getCurrentTime().equals(temp.currentTime)) {
                         dp.getRef().removeValue();
                     }
                 }
