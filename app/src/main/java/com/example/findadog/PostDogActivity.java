@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ public class PostDogActivity extends AppCompatActivity {
     Boolean isStart = true;
     int x = 0;
     final  static  int GET_IMAGE_FROM_GALLERY=1;
+    final  static  int Max_Image=5;
 EditText dogBreed,dogGender,dogBirthday,dogAddress,dogInfo,dogPhone,dogPrice;
 Button btnSendPost,btnDatePicker,btnAddImage;
     DatePickerDialog datePickerDialog;
@@ -128,16 +130,42 @@ Button btnSendPost,btnDatePicker,btnAddImage;
         btnAddImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+              if(imageList.equals(new ArrayList<Uri>()))
                 getImageFromGallery();
-
-
+              else{
+                  ShowDialogImage();
+              }
             }
-
-
-
         });
     }
+    private void ShowDialogImage() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("בחר עד חמש תמנות");
+        alert.setMessage("האם להוסיף עוד תמנות למה שנבחר?");
+        alert.setPositiveButton("כן", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
+                getImageFromGallery();
+            }
+        });
+
+        alert.setNegativeButton("בחר מחדש", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                imageList=new ArrayList<Uri>();
+                getImageFromGallery();
+            }
+        });
+
+        alert.setNeutralButton("סיום", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        alert.create().show();
+    }
 
 
     private void readFromDB() {
@@ -211,6 +239,7 @@ Button btnSendPost,btnDatePicker,btnAddImage;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         switch(requestCode){
             case GET_IMAGE_FROM_GALLERY:
                 if(resultCode ==RESULT_OK) {
@@ -218,8 +247,8 @@ Button btnSendPost,btnDatePicker,btnAddImage;
                         // imgeUri = data.getData();
                         int countClipData =data.getClipData().getItemCount();
                         int currentImagesSelect = 0;
-                        if (countClipData>5)
-                            countClipData=5;
+                        if (countClipData>Max_Image)
+                            countClipData=Max_Image;
                         while (currentImagesSelect < countClipData) {
                             imageUri = data.getClipData().getItemAt(currentImagesSelect).getUri();
                             imageList.add((imageUri));
